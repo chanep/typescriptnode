@@ -1,0 +1,9 @@
+Typings
+-------
+Install typescript definition files of js libraries
+
+Search:
+typings search express --ambient
+
+Install:
+typings install express --ambient --save
