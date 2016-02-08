@@ -13,5 +13,8 @@ clientRouter.get("/", clientController.list);
 
 app.use("/api/clients", clientRouter);
 
+
 // Listen for HTTP traffic
 app.listen(process.env.PORT || 3000);
+console.log("Listening in port 3000...");
+
