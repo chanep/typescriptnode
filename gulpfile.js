@@ -40,7 +40,8 @@ gulp.task('ts-lint', function () {
 gulp.task('compile-ts', function () {
     var sourceTsFiles = [config.allTypeScript,                //path to typescript files
                          config.libraryTypeScriptDefinitions]; //reference to library .d.ts files
-                        
+          
+                       
 
     var tsResult = gulp.src(sourceTsFiles)
                        .pipe(sourcemaps.init())
@@ -48,7 +49,7 @@ gulp.task('compile-ts', function () {
 
         tsResult.dts.pipe(gulp.dest(config.tsOutputPath));
         return tsResult.js
-                        .pipe(sourcemaps.write('.'))
+                        .pipe(sourcemaps.write('.', {includeContent: false, sourceRoot: getSourceRoot}))
                         .pipe(gulp.dest(config.tsOutputPath));
 });
 
@@ -72,3 +73,29 @@ gulp.task('watch', function() {
 
 
 gulp.task('default', ['ts-lint', 'compile-ts']);
+
+
+function logFile(file){
+    // for(var i in file){
+    //     console.log(i);
+    // }
+    console.log("base: " + file.base)
+    console.log("cwd: " + file.cwd)
+    console.log("SourceMap.sources: " + file.sourceMap.sources)
+    //     for(var i in file.sourceMap){
+    //     console.log(i);
+    // }
+}
+
+function getSourceRoot(file){
+    //console.log(file.sourceMap.sources);
+    //         for(var i in file.sourceMap.sources){
+    //     console.log(i);
+    // }
+    if(file.sourceMap.sources.length){
+        var depth = file.sourceMap.sources[0].split('/').length;
+        var sourceRoot = Array(depth + 1).join("../") + "ts";
+        return sourceRoot;
+    }
+    return "";
+}
