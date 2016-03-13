@@ -3,7 +3,6 @@ import Client = require('../models/client')
 
 class BaseController{
 	constructor(){
-		this.list = this.list.bind(this);
 	}
 	list(req: express.Request, res: express.Response) {
 		console.log("Base List");

@@ -9,7 +9,7 @@ var app = express();
 app.use(bodyParser.json());
 
 var clientRouter = express.Router();
-clientRouter.get("/", clientController.list);
+clientRouter.get("/", clientController.list.bind(clientController));
 
 app.use("/api/clients", clientRouter);
 
