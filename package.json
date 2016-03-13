@@ -1,36 +1,37 @@
 {
-    "name": "typescriptnode",
-    "version": "1.0.0",
-    "description": "",
-    "main": "./src/js/app.js",
-    "dependencies": {
-        "body-parser": "^1.14.2",
-        "express": "^4.13.4"
-    },
-    "devDependencies": {
-        "del": "^2.2.0",
-        "gulp": "^3.9.0",
-        "gulp-concat": "^2.6.0",
-        "gulp-debug": "^2.1.2",
-        "gulp-inject": "^3.0.0",
-        "gulp-sourcemaps": "^1.6.0",
-        "gulp-tslint": "^4.3.1",
-        "gulp-typescript": "^2.10.0",
-        "tslint": "^3.3.0"
-    },
-    "scripts": {
-        "start": "node ./src/js/app.js",
-        "gulp": "gulp",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/chanep/typescriptnode.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/chanep/typescriptnode/issues"
-    },
-    "homepage": "https://github.com/chanep/typescriptnode#readme"
+  "name": "typescriptnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/js/app.js",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-inject": "^3.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^4.3.1",
+    "gulp-typescript": "^2.10.0",
+    "tslint": "^3.3.0",
+    "typings": "^0.7.8"
+  },
+  "scripts": {
+    "start": "node ./src/js/app.js",
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanep/typescriptnode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chanep/typescriptnode/issues"
+  },
+  "homepage": "https://github.com/chanep/typescriptnode#readme"
 }
