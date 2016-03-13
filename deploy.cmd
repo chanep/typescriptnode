@@ -108,7 +108,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 :: 4. Install typings packages
 IF EXIST "%DEPLOYMENT_TARGET%\typings.json" (
   pushd "%DEPLOYMENT_TARGET%"
-  call :ExecuteCmd typings install
+  call :ExecuteCmd .\node_modules\.bin\typings install
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
